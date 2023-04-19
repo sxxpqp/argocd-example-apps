@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: javademo
+spec:
+  type: NodePort
+  ports:
+    - port: 8012
+      targetPort: 8080
+  selector:
+    app: javademo
