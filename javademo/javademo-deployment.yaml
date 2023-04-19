@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: javademo
+
+spec:
+
+  replicas: 1
+
+  revisionHistoryLimit: 3
+
+  selector:
+
+    matchLabels:
+
+      app: javademo
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: javademo
+
+    spec:
+
+      containers:
+
+      - image: 10.39.140.196:8081/apps/javademo:replace
+
+        name: javademo
+
+        ports:
+
+        - containerPort: 8080
