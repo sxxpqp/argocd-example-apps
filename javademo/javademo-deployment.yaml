@@ -14,7 +14,7 @@ spec:
         app: javademo
     spec:
       containers:
-        - image: sxxpqp/javademo:replace
+        - image: sxxpqp/devops-java-sample:v1.0
           name: javademo
           ports:
             - containerPort: 8080
